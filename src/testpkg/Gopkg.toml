@@ -1,3 +1,7 @@
+############################################################
+# Comment out this whole section and uncomment the other
+# this part contains client-go at v2
+############################################################
 [[override]]
   name = "github.com/ugorji/go"
   revision = "d463ef40929c1805e71d5e821ac82f6b90cbc7c6"
@@ -8,7 +12,11 @@
   revision = "e121606b0d09b2e1c467183ee46217fa85a6b672"
   source = "https://github.com/kubernetes/client-go.git"
 
-## Uncomment this an dcomment out k8s.io/client-go to test.
+
+# ############################################################
+# # Uncomment this section and comment out the previous one
+# # this will attempt to upgrade client-go to 1.9
+# ############################################################
 # required = [
 #     # Dependencies of k8s.io ignored packages.
 #     "github.com/docker/distribution/reference",
@@ -17,7 +25,11 @@
 #     "gopkg.in/inf.v0"]
 # 
 # # These packages were deprecated in kubernetes 1.9 client API.
-# ignored = ["k8s.io/client-go/pkg"]
+# ignored = ["k8s.io/client-go/pkg/*"]
+# 
+# [[override]]
+#   name = "github.com/ugorji/go"
+#   revision = "d463ef40929c1805e71d5e821ac82f6b90cbc7c6"
 # 
 # # client-go at 1.9
 # [[override]]
