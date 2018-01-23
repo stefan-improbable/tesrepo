@@ -14,6 +14,12 @@
   revision = "de5bf2ad457846296e2031421a34e2568e304e35"
 
 [[projects]]
+  name = "github.com/blang/semver"
+  packages = ["."]
+  revision = "2ee87856327ba09384cabd113bc6b5d174e9ec0f"
+  version = "v3.5.1"
+
+[[projects]]
   name = "github.com/davecgh/go-spew"
   packages = ["spew"]
   revision = "346938d642f2ec3594ed81d874461961cd0faa76"
@@ -87,6 +93,12 @@
   name = "github.com/google/gofuzz"
   packages = ["."]
   revision = "24818f796faf91cd76ec7bddd72458fbced7a6c1"
+
+[[projects]]
+  name = "github.com/juju/ratelimit"
+  packages = ["."]
+  revision = "59fac5042749a5afb9af70e813da1dd5474f0167"
+  version = "1.0.1"
 
 [[projects]]
   branch = "master"
@@ -165,13 +177,16 @@
   name = "k8s.io/client-go"
   packages = [
     "pkg/api",
+    "pkg/api/errors",
     "pkg/api/meta",
     "pkg/api/meta/metatypes",
     "pkg/api/resource",
     "pkg/api/unversioned",
     "pkg/api/v1",
+    "pkg/api/validation/path",
     "pkg/apis/autoscaling",
     "pkg/apis/batch",
+    "pkg/apis/certificates",
     "pkg/apis/extensions",
     "pkg/auth/user",
     "pkg/conversion",
@@ -190,8 +205,12 @@
     "pkg/third_party/forked/golang/reflect",
     "pkg/types",
     "pkg/util",
+    "pkg/util/cert",
+    "pkg/util/clock",
     "pkg/util/errors",
+    "pkg/util/flowcontrol",
     "pkg/util/framer",
+    "pkg/util/integer",
     "pkg/util/intstr",
     "pkg/util/json",
     "pkg/util/labels",
@@ -205,8 +224,13 @@
     "pkg/util/validation/field",
     "pkg/util/wait",
     "pkg/util/yaml",
+    "pkg/version",
     "pkg/watch",
-    "pkg/watch/versioned"
+    "pkg/watch/versioned",
+    "rest",
+    "tools/clientcmd/api",
+    "tools/metrics",
+    "transport"
   ]
   revision = "e121606b0d09b2e1c467183ee46217fa85a6b672"
   source = "https://github.com/kubernetes/client-go.git"
@@ -214,6 +238,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "f8121adc2e7a60b8128c73a5b9b2103dcd282ef54e6aa196fb33c9d5ba6bfbe4"
+  inputs-digest = "eebbf0e9cbc1bc8dfb3697a1fee0094003198ae9005bba5b9b086f67819c2fb6"
   solver-name = "gps-cdcl"
   solver-version = 1
