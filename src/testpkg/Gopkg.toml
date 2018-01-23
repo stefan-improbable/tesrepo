@@ -1,8 +1,26 @@
 [[override]]
+  name = "github.com/ugorji/go"
+  revision = "d463ef40929c1805e71d5e821ac82f6b90cbc7c6"
+
+# client-go at v2 whatever that is.
+[[override]]
   name = "k8s.io/client-go"
   revision = "e121606b0d09b2e1c467183ee46217fa85a6b672"
   source = "https://github.com/kubernetes/client-go.git"
 
-[[override]]
-  name = "github.com/ugorji/go"
-  revision = "d463ef40929c1805e71d5e821ac82f6b90cbc7c6"
+## Uncomment this an dcomment out k8s.io/client-go to test.
+# required = [
+#     # Dependencies of k8s.io ignored packages.
+#     "github.com/docker/distribution/reference",
+#     "github.com/go-openapi/spec",
+#     "github.com/google/gofuzz",
+#     "gopkg.in/inf.v0"]
+# 
+# # These packages were deprecated in kubernetes 1.9 client API.
+# ignored = ["k8s.io/client-go/pkg"]
+# 
+# # client-go at 1.9
+# [[override]]
+#   name = "k8s.io/client-go"
+#   revision = "9389c055a838d4f208b699b3c7c51b70f2368861"
+#   source = "https://github.com/kubernetes/client-go.git"
