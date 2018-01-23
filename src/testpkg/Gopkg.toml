@@ -1,0 +1,8 @@
+[[override]]
+  name = "k8s.io/client-go"
+  revision = "e121606b0d09b2e1c467183ee46217fa85a6b672"
+  source = "https://github.com/kubernetes/client-go.git"
+
+[[override]]
+  name = "github.com/ugorji/go"
+  revision = "d463ef40929c1805e71d5e821ac82f6b90cbc7c6"
