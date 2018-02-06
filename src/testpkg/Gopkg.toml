@@ -6,7 +6,7 @@
   name = "github.com/ugorji/go"
   revision = "d463ef40929c1805e71d5e821ac82f6b90cbc7c6"
 
-# client-go at v2 whatever that is.
+# client-go at v2.
 [[override]]
   name = "k8s.io/client-go"
   revision = "e121606b0d09b2e1c467183ee46217fa85a6b672"
@@ -22,10 +22,15 @@
 #     "github.com/docker/distribution/reference",
 #     "github.com/go-openapi/spec",
 #     "github.com/google/gofuzz",
-#     "gopkg.in/inf.v0"]
+#     "gopkg.in/inf.v0",
+# ]
 # 
-# # These packages were deprecated in kubernetes 1.9 client API.
-# ignored = ["k8s.io/client-go/pkg/*"]
+# [prune]
+#   unused-packages = true
+# 
+#   [[prune.project]]
+#     name = "k8s.io/client-go"
+#     unused-packages = false
 # 
 # [[override]]
 #   name = "github.com/ugorji/go"
